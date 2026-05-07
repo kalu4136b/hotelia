@@ -1,0 +1,16 @@
+{
+  "name": "hotelia-tenant",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "node init && concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "start": "node init && node server/src/index.js",
+    "install-all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
